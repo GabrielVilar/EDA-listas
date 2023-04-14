@@ -31,6 +31,11 @@ int main(int argc, char const *argv[])
     return 0;
 }
 /*
+PDF Informativo:
+    https://drive.google.com/file/d/1J4uTj0ym_ocW4gs69v0h9TWyrU_zkmC1/view
+*/
+/*
+//Usando uma função
 #include <stdio.h>
 int contaString(char str[]);
 int main(){

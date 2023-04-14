@@ -13,3 +13,7 @@ int main(){
     printf("%s\n",inversa);
     return 0;
 }
+/*
+PDF Informativo:
+    https://drive.google.com/file/d/1mcVm3zFZJcF7qWwqPEzdv3SW14LLhnTr/view
+*/

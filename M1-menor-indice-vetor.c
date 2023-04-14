@@ -15,3 +15,7 @@ int main()
     printf("%d", iMenor);
     return 0;
 }
+/*
+PDF Informativo:
+    https://drive.google.com/file/d/1OTpeEMYgiQ-YJyA35OM1xpg0MypD9V1l/view
+*/
