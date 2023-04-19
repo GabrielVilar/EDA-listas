@@ -20,7 +20,7 @@ int main(){
 
     dist = distX + distY;
 
-    printf("%d ", dist);
+    printf("%d\n", dist);
     
     return 0;
 }
