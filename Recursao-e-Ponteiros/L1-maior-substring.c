@@ -23,7 +23,7 @@ int maiorSubcadeia(char* str, char* sub, int tamStr, int tamSub) {
     }
 }
 int main() {
-    char str[101], sub[101];
+    char str[102], sub[101];
     scanf("%s", str);
     scanf("%s", sub);
     int tamStr = strlen(str), tamSub = strlen(sub);
