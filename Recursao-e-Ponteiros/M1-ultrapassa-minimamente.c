@@ -25,7 +25,7 @@ int main(){
         }
 
     } while (numero != 0);
-    // imprime o vetor
+    
     scanf("%d", &barra);
 
     for (int i = 0; i < tamanho; i++){
