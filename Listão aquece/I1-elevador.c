@@ -23,7 +23,3 @@ int main() {
 
     return 0;
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/1ECQTAGqIy9Be7zi7bRE3UdU7Ipo_UTI2/view
-*/

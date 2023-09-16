@@ -16,7 +16,3 @@ int contaString(char str[]){
     }
     return tamanho;
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/1OAFstX4m3gtU_rE4R3xGtNTVekPitixK/view
-*/

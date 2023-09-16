@@ -20,7 +20,3 @@ int main()
     
     return 0;
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/12zBZICyrocqPiW9MloAZb3Hu88vd51C5/view
-*/

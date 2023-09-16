@@ -1,42 +1,36 @@
 #include <stdio.h>
-int main(int argc, char const *argv[])
-{
-    char frase[1000];
-    char letra;
-    int qtd_letra = 0, qtd_palavras_sem_letra = 0;
-    float porcentagem, qtd_palavra_com_letra = 0.0, total_de_palavras;
+// int main(int argc, char const *argv[])
+// {
+//     char frase[1000];
+//     char letra;
+//     int qtd_letra = 0, qtd_palavras_sem_letra = 0;
+//     float porcentagem, qtd_palavra_com_letra = 0.0, total_de_palavras;
 
-    scanf("%c\n%[^\n]s", &letra, frase);
+//     scanf("%c\n%[^\n]s", &letra, frase);
 
-    for(int i = 0; frase[i] != '\0'; i++){
-        for(i=i;(frase[i] != ' '); i++){
-            if(frase[i] == letra){
-                qtd_letra++;
-            }
-        }
+//     for(int i = 0; frase[i] != '\0'; i++){
+//         for(i=i;(frase[i] != ' '); i++){
+//             if(frase[i] == letra){
+//                 qtd_letra++;
+//             }
+//         }
       
-        if(qtd_letra >= 1){
-            qtd_palavra_com_letra++;
-        }else{
-            qtd_palavras_sem_letra++;
-        }
-        qtd_letra = 0;
-    }
+//         if(qtd_letra >= 1){
+//             qtd_palavra_com_letra++;
+//         }else{
+//             qtd_palavras_sem_letra++;
+//         }
+//         qtd_letra = 0;
+//     }
     
-    total_de_palavras = (qtd_palavra_com_letra + qtd_palavras_sem_letra);
+//     total_de_palavras = (qtd_palavra_com_letra + qtd_palavras_sem_letra);
 
-    porcentagem = ((qtd_palavra_com_letra * 100)/total_de_palavras);
+//     porcentagem = ((qtd_palavra_com_letra * 100)/total_de_palavras);
 
-    printf("%.1f\n",porcentagem);
-    return 0;
-}
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/1J4uTj0ym_ocW4gs69v0h9TWyrU_zkmC1/view
-*/
-/*
+//     printf("%.1f\n",porcentagem);
+//     return 0;
+// }
 //Usando uma função
-#include <stdio.h>
 int contaString(char str[]);
 int main(){
     char letra;
@@ -89,4 +83,3 @@ int contaString(char str[]){
     }
     return tamanho;
 }
-*/

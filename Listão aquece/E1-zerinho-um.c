@@ -24,7 +24,3 @@ int main()
     }
     return 0;
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/10cg9RPBDv1veqZVfzbzD1Q_lAaEU4MEI/view
-*/

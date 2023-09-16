@@ -13,7 +13,3 @@ int main()
     printf("%d\n",custo_total);
     return 0;
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/1dSf-F7U9RnDgFf4E-gaYPbHwnWfxknWy/view
-*/

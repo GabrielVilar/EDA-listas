@@ -1,10 +1,14 @@
 #include <stdio.h>
+//#include <string.h>
+//Poderia usar o strlen ao invés da função contaString
+#define MAX 1000
+int contaString(char str[]);
 int main(){
-    char str[1000];
-    char inversa[1000];
+    char str[MAX];
+    char inversa[MAX];
     int i,n, x = 0;
     scanf("%s",str);
-    n = strlen(str);
+    n = contaString(str);
     for(i = n-1; i>=0;i--){
         inversa[x] = str[i];
         x++;
@@ -13,7 +17,11 @@ int main(){
     printf("%s\n",inversa);
     return 0;
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/1mcVm3zFZJcF7qWwqPEzdv3SW14LLhnTr/view
-*/
+int contaString(char str[]){
+    int tamanho = 0;
+    while (str[tamanho] != '\0')
+    {
+        tamanho++;
+    }
+    return tamanho;
+}

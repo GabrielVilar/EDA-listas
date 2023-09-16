@@ -20,7 +20,3 @@ int main()
         }
     }
 }
-/*
-PDF Informativo:
-    https://drive.google.com/file/d/1VlguFPT2bvkwmoxVdM2B0aJqZC2B5ypc/view
-*/
