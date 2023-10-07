@@ -1,16 +1,16 @@
 #include <stdio.h>
 void swap(int *a, int *b) {
-  int temp = *a;
+  int temp;
+  temp = *a;
   *a = *b;
   *b = temp;
 }
 int main(){
-  int a, b, *aa, *bb;
+  int a, b;
   a = 3;
-  aa = &a; 
   b = 7;
-  bb = &b;
-  swap(aa,bb);
-  printf("%d %d\n", *aa, *bb);
-  return 0;
+  
+  printf("Antes: %d %d\n", a, b);
+  swap(&a,&b);
+  printf("Depois: %d %d", a, b);
 }

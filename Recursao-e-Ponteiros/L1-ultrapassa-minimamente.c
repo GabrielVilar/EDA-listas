@@ -43,8 +43,6 @@ int main(){
         }
         
     }
-    //printf("\n");
-    //printf("%d %d %d %d\n", barra, cont, tamanhoAux, capacidadeAux);
     
     for (int i = tamanhoAux - 1; i >= 0; i--){
         printf("%d\n",vetor[vetorAux[i]]);
@@ -56,7 +54,6 @@ int main(){
     return 0;
 }
 
-//Versão do chatGPT
 /*
 #include <stdio.h>
 #include <stdlib.h>
@@ -114,7 +111,7 @@ int main() {
     return 0;
 }
 */
-//Outra maneira que tá errada do chatGPT
+
 /*
 #include <stdio.h>
 #include <stdlib.h>
