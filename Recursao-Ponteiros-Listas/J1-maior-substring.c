@@ -2,7 +2,6 @@
 #include <string.h>
 int maiorSubcadeia(char* str, char* sub, int tamStr, int tamSub) {
     if (tamStr < tamSub) {
-       
         return 0;
     } else if (strncmp(str, sub, tamSub) == 0) {
         
@@ -10,8 +9,7 @@ int maiorSubcadeia(char* str, char* sub, int tamStr, int tamSub) {
         if (pos == NULL) {
           
             return tamSub; 
-        } else {
-         
+        } else {         
             int tamAtual = pos + tamSub - str + maiorSubcadeia(pos + tamSub, sub, tamStr - (pos + tamSub - str), tamSub);
            
             int tamOutra = maiorSubcadeia(pos + tamSub, sub, tamStr - (pos + tamSub - str), tamSub);
