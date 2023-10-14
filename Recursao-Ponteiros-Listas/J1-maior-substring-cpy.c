@@ -31,7 +31,7 @@ int maior_subcadeia(char* string, char* substring, int tamanho_string, int taman
             tamanho_atual = segunda_verificacao + tamanho_substring - string + 
             maior_subcadeia(segunda_verificacao + tamanho_substring, substring, 
             tamanho_string - (segunda_verificacao + tamanho_substring - string), tamanho_substring);
-
+            
             tamanho_proxima = maior_subcadeia(segunda_verificacao + tamanho_substring, substring, 
             tamanho_string - (segunda_verificacao + tamanho_substring - string), tamanho_substring);
             

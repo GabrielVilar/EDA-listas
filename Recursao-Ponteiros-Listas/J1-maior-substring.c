@@ -7,7 +7,6 @@ int maiorSubcadeia(char* str, char* sub, int tamStr, int tamSub) {
         
         char* pos = strstr(str + tamSub, sub); 
         if (pos == NULL) {
-          
             return tamSub; 
         } else {         
             int tamAtual = pos + tamSub - str + maiorSubcadeia(pos + tamSub, sub, tamStr - (pos + tamSub - str), tamSub);

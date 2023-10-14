@@ -1,4 +1,4 @@
-#include <stdio.h>
+/*#include <stdio.h>
 #include <stdlib.h>
 int main(){
     
@@ -52,7 +52,7 @@ int main(){
     free(vetor);
     free(vetorAux);
     return 0;
-}
+}*/
 
 /*
 #include <stdio.h>
