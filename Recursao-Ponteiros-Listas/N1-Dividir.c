@@ -5,14 +5,24 @@ typedef struct celula{
     struct celula *prox;
 }celula;
 
-void divide_lista(celula *1, celula *11, celula *12);
+void divide_lista(celula *l, celula *l1, celula *l2){
+    celula *atual = l->prox;
+    celula *atual_l1 = l1;
+    celula *atual_l2 = l2;
 
-int main(int argc, char const *argv[])
-{
+    while (atual != NULL) {
+        if (atual->dado % 2 == 0) {
+            atual_l2->prox = atual;
+            atual_l2 = atual_l2->prox;
+        } else {
+            atual_l1->prox = atual;
+            atual_l1 = atual_l1->prox;
+        }
+        atual = atual->prox;
+    }
     
-    return 0;
-}
+    atual_l1->prox = NULL;
+    atual_l2->prox = NULL;
 
-void divide_lista(celula *1, celula *11, celula *12){
-    
+    l->prox = NULL;
 }
