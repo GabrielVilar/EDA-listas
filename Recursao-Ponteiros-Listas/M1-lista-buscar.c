@@ -1,23 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct celula{
+typedef struct celula {
     int dado;
     struct celula *prox;
-}celula;
+} celula;
 
-celula *busca (celula *le, int x);
-celula *busca_recursiva (celula *le, int x);
-
-int main(){
-    
-    return 0;
+celula *busca(celula *le, int x) {
+    celula *atual = le->prox;
+    while (atual != NULL) {
+        if (atual->dado == x) {
+            return atual;
+        }
+        atual = atual->prox;
+    }
+    return NULL;
 }
 
-celula *busca (celula *le, int x){
-
-}
-
-celula *busca_recursiva (celula *le, int x){
-    
+celula *busca_rec(celula *le, int x) {
+    if (le == NULL) {
+        return NULL;
+    }
+    if (le->dado == x) {
+        return le;
+    }
+    return busca_rec(le->prox, x);
 }
