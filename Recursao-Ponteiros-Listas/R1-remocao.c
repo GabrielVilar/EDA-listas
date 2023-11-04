@@ -14,15 +14,15 @@ int main(int argc, char const *argv[])
     
     return 0;
 }
-
+// Remove depois
 int remove_depois(celula *p){
 
 }
-
+// Remove elementos
 void remove_elemento(celula *le, int x){
 
 }
-
+// Remove todos os elementos
 void remove_todos_elementos(celula *le, int x){
     
 }
