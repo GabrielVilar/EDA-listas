@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+
 int maiorSubcadeia(char* str, char* sub, int tamStr, int tamSub) {
     if (tamStr < tamSub) {
         return 0;
