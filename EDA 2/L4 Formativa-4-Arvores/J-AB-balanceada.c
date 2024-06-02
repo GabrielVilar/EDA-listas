@@ -1,81 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
+struct Node {
+    int data;
+    struct Node* left;
+    struct Node* right;
+};
 
-#define MAX_NODES 5000
-
-typedef struct Node {
-    int parent;
-    int left;
-    int right;
-} Node;
-
-Node tree[MAX_NODES];
-int height[MAX_NODES];
-
-int calculate_height(int node) {
-    if (node == 0) {
-        return 0; 
-    }
-
-    if (height[node] != -1) {
-        return height[node];
-    }
-
-    int left_height = calculate_height(tree[node].left);
-    int right_height = calculate_height(tree[node].right);
-
-    height[node] = 1 + ((left_height > right_height) ? left_height : right_height);
-
-    return height[node];
+struct Node* newNode(int data) {
+    struct Node* node = (struct Node*)malloc(sizeof(struct Node));
+    node->data = data;
+    node->left = node->right = NULL;
+    return node;
 }
 
-int is_balanced(int node) {
-    if (node == 0) {
+int getHeight(struct Node* node) {
+    if (node == NULL) {
+        return 0;
+    }
+    int leftHeight = getHeight(node->left);
+    int rightHeight = getHeight(node->right);
+    return 1 + (leftHeight > rightHeight ? leftHeight : rightHeight);
+}
+
+int isBalanced(struct Node* node) {
+    if (node == NULL) {
         return 1; 
     }
 
-    int left_height = height[tree[node].left];
-    int right_height = height[tree[node].right];
+    int leftHeight = getHeight(node->left);
+    int rightHeight = getHeight(node->right);
 
-    if (abs(left_height - right_height) <= 1 &&
-        is_balanced(tree[node].left) &&
-        is_balanced(tree[node].right)) {
-        return 1;
+    int diff = abs(leftHeight - rightHeight);
+
+    if (diff > 1) {
+        return 0;
     }
 
-    return 0;
+    return isBalanced(node->left) && isBalanced(node->right);
 }
 
 int main() {
     int N;
     scanf("%d", &N);
 
-    for (int i = 1; i <= N; ++i) {
-        tree[i].parent = 0;
-        tree[i].left = 0;
-        tree[i].right = 0;
-        height[i] = -1;
+    int parents[N];
+    for (int i = 1; i < N; i++) {
+        scanf("%d", &parents[i]);
     }
 
-    for (int i = 2; i <= N; ++i) {
-        int parent;
-        scanf("%d", &parent);
+    struct Node* nodes[N]; 
+    for (int i = 0; i < N; i++) {
+        nodes[i] = newNode(i + 1); 
+    }
 
-        if (tree[parent].left == 0) {
-            tree[parent].left = i;
+    for (int i = 1; i < N; i++) {
+        int parent = parents[i] - 1;
+        if (nodes[parent]->left == NULL) {
+            nodes[parent]->left = nodes[i];
         } else {
-            tree[parent].right = i;
+            nodes[parent]->right = nodes[i];
         }
-        tree[i].parent = parent;
     }
 
-    int root = 1;
-    calculate_height(root);
-
-    if (is_balanced(root)) {
-        printf("Sim\n");
+    if (isBalanced(nodes[0])) {
+        printf("Yes\n");
     } else {
-        printf("Não\n");
+        printf("No\n");
     }
 
     return 0;
