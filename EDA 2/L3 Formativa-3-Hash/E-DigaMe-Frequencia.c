@@ -23,7 +23,7 @@ int compare(const void* a, const void* b) {
 void processInput(char* input) {
     int frequency[MAX_CHAR] = {0};
 
-    for (int i = 0; i < strlen(input); i++) {
+    for (int i = 0; i < strlen(input); i++){
         unsigned char ch = input[i];
         frequency[ch]++;
     }
